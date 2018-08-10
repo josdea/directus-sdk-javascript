@@ -136,7 +136,7 @@ function SDK(options = {}) {
           } else if (error.json === true) {
             throw {
               // eslint-disable-line
-              code: -1,
+              code: -2,
               message: 'API returned invalid JSON',
               error: error.error,
               data: error.data
