@@ -120,7 +120,8 @@ function SDK(options = {}) {
             } catch(error) {
               throw {
                 json: true,
-                error
+                error,
+                data
               };
             }
           }
@@ -135,7 +136,8 @@ function SDK(options = {}) {
               // eslint-disable-line
               code: -1,
               message: 'API returned invalid JSON',
-              error,
+              error: error.error,
+              data: error.data
             };
           } else {
             throw {
