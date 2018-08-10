@@ -113,9 +113,30 @@ function SDK(options = {}) {
       return this.axios
         .request(requestOptions)
         .then(res => res.data)
+        .then(data => {
+          if (typeof data !== 'object') {
+            try {
+              return JSON.parse(data);
+            } catch(error) {
+              throw {
+                json: true,
+                error
+              };
+            }
+          }
+
+          return data;
+        })
         .catch((error) => {
           if (error.response) {
             throw error.response.data.error;
+          } else if (error.json === true) {
+            throw {
+              // eslint-disable-line
+              code: -1,
+              message: 'API returned invalid JSON',
+              error,
+            };
           } else {
             throw {
               // eslint-disable-line
