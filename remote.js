@@ -114,6 +114,8 @@ function SDK(options = {}) {
         .request(requestOptions)
         .then(res => res.data)
         .then(data => {
+          if (!data || data.length === 0) return data;
+
           if (typeof data !== 'object') {
             try {
               return JSON.parse(data);
