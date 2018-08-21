@@ -922,6 +922,16 @@ function SDK(options = {}) {
     // -------------------------------------------------------------------------
 
     /**
+     * Get all relationships
+     * @param  {Object} [params={}] Query parameters
+     * @return {RequestPromise}
+     */
+    getRelations(params = {}) {
+      AV.objectOrEmpty(params);
+      return this.get('/relations', params);
+    },
+
+    /**
      * Get the relationship information for the given collection
      * @param  {String} collection The collection name
      * @param  {Object} [params={}] Query parameters
