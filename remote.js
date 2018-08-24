@@ -931,7 +931,7 @@ function SDK(options = {}) {
       return this.get('/relations', params);
     },
 
-    createRelation(primaryKey, data) {
+    createRelation(data) {
       return this.post('/relations', data);
     },
 
