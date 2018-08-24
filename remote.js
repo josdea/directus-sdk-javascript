@@ -931,6 +931,10 @@ function SDK(options = {}) {
       return this.get('/relations', params);
     },
 
+    createRelation(primaryKey, data) {
+      return this.post('/relations', data);
+    },
+
     updateRelation(primaryKey, data) {
       return this.patch(`/relations/${primaryKey}`, data);
     },
