@@ -931,6 +931,10 @@ function SDK(options = {}) {
       return this.get('/relations', params);
     },
 
+    updateRelation(primaryKey, data) {
+      return this.patch(`/relations/${primaryKey}`, data);
+    },
+
     /**
      * Get the relationship information for the given collection
      * @param  {String} collection The collection name
