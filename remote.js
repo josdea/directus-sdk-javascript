@@ -1125,6 +1125,14 @@ function SDK(options = {}) {
     },
 
     /**
+     * Get the server info from the API
+     * @return {RequestPromise}
+     */
+    serverInfo() {
+      return this.request('get', '/', {}, {}, true);
+    },
+
+    /**
      * Get all the setup third party auth providers
      * @return {RequestPromise}
      */
