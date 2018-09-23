@@ -1,3 +1,5 @@
+const remote = require('./src/remote');
+
 module.exports = {
-  remote: require('./remote')
+  remote,
 };
