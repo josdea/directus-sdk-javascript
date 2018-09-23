@@ -5,6 +5,9 @@
   "main": "dist/remote.cjs.js",
   "module": "dist/remote.esm.js",
   "browser": "dist/remote.umd.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "eslint .",
     "test": "mocha --exit --recursive",
