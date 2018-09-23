@@ -9,7 +9,7 @@ import pkg from './package.json';
 export default [
   // browser-friendly UMD build
   {
-    input: 'index.js',
+    input: 'src/remote.js',
     output: {
       name: 'remoteInstance',
       file: pkg.browser,
@@ -33,8 +33,8 @@ export default [
   // an array for the `output` option, where we can specify
   // `file` and `format` for each target)
   {
-    input: 'index.js',
-    external: ['axios', 'qs'],
+    input: 'src/remote.js',
+    external: ['argument-validator', 'axios', 'base-64', 'qs'],
     output: [
       { file: pkg.main, format: 'cjs' },
       { file: pkg.module, format: 'es' },
