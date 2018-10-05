@@ -5,3 +5,4 @@
 !dist/remote.js
 !dist/remote.esm.js
 !dist/remote.umd.js
+!dist/remote.cjs.js
