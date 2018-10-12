@@ -171,11 +171,11 @@ function SDK(options = {}) {
      * @param  {Object} [body={}] The HTTP request body
      * @return {RequestPromise}
      */
-    post(endpoint, body = {}) {
+    post(endpoint, body = {}, params = {}) {
       AV.string(endpoint, 'endpoint');
       Array.isArray(body) ? AV.arrayOrEmpty(body, 'body') : AV.objectOrEmpty(body, 'body');
 
-      return this.request('post', endpoint, {}, body);
+      return this.request('post', endpoint, params, body);
     },
 
     /**
@@ -184,11 +184,11 @@ function SDK(options = {}) {
      * @param  {Object} [body={}] The HTTP request body
      * @return {RequestPromise}
      */
-    patch(endpoint, body = {}) {
+    patch(endpoint, body = {}, params = {}) {
       AV.string(endpoint, 'endpoint');
       Array.isArray(body) ? AV.arrayOrEmpty(body, 'body') : AV.objectOrEmpty(body, 'body');
 
-      return this.request('patch', endpoint, {}, body);
+      return this.request('patch', endpoint, params, body);
     },
 
     /**
@@ -197,11 +197,11 @@ function SDK(options = {}) {
      * @param  {Object} [body={}] The HTTP request body
      * @return {RequestPromise}
      */
-    put(endpoint, body = {}) {
+    put(endpoint, body = {}, params = {}) {
       AV.string(endpoint, 'endpoint');
       Array.isArray(body) ? AV.arrayOrEmpty(body, 'body') : AV.objectOrEmpty(body, 'body');
 
-      return this.request('put', endpoint, {}, body);
+      return this.request('put', endpoint, params, body);
     },
 
     /**
