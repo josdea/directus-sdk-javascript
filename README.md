@@ -75,4 +75,4 @@ Since the SDK uses promises, you can also use it with [async/await](https://www.
 const projects = await client.getItems('projects');
 ```
 
-Check [the official API docs for a complete overview of all endpoints and available methods](https://api.getdirectus.com/1.1/#Getting_Data)
+Check [the official API docs for a complete overview of all endpoints and available methods](https://docs.directus.io/api/reference.html)
